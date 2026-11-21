@@ -49,11 +49,11 @@
       "version": "1.0.0"
     }
   ],
-  "expiresAt": "2027-05-20T09:04:20Z",
-  "issuedAt": "2026-11-21T09:04:20Z",
+  "expiresAt": "2027-05-20T14:49:38Z",
+  "issuedAt": "2026-11-21T14:49:38Z",
   "kind": "red-pen-adapters",
   "publisher": "Red Pen Community",
   "registryId": "red-pen-community",
   "schema": 7,
-  "sequence": 2
+  "sequence": 3
 }
