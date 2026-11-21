@@ -1,17 +1,17 @@
 {
-  "expiresAt": "2027-05-20T14:49:38Z",
-  "generatedAt": "2026-11-21T14:49:40Z",
-  "issuedAt": "2026-11-21T14:49:38Z",
+  "expiresAt": "2027-05-20T19:19:58Z",
+  "generatedAt": "2026-11-21T19:20:01Z",
+  "issuedAt": "2026-11-21T19:19:58Z",
   "keyId": "743C219E03A4F152",
   "kind": "red-pen-adapters-release",
   "publicKeyFingerprint": "7a8c5f319caf0d0e7539558c56524e2a6c9385f615a8b242fb044c14ffffbedb",
   "registryId": "red-pen-community",
-  "registrySha256": "1ce2145db71d5fe61704702a60f3dd1858b718b7d1e7104df89ce47a21132711",
+  "registrySha256": "b927ec44bbab22792c51980d12b4dd7e9cac1c7c57e7563e4e076f2ce196b428",
   "schema": 1,
-  "sequence": 3,
-  "signatureSha256": "89f6c3a48f0b5a6f92a13ced3bdd92a6c9176d6bfa8506d3d8cfccadd1c0607b",
+  "sequence": 4,
+  "signatureSha256": "588e44730e0c5556d8c5ccf22d12f6b0761a3b56054306425a8b8b77b2c7c8e8",
   "signerCommit": "f558366b804681f91a7a4116921ceff15bb6f803",
-  "tag": "registry-v3",
+  "tag": "registry-v4",
   "tier": "community",
-  "workflowRun": "https://github.com/eslam-allam/red-pen-adapters-community/actions/runs/44914759101"
+  "workflowRun": "https://github.com/eslam-allam/red-pen-adapters-community/actions/runs/44939559388"
 }
