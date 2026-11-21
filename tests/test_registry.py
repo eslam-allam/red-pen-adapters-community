@@ -39,7 +39,13 @@ def copy_template() -> Path:
         directory,
         dirs_exist_ok=True,
         ignore=shutil.ignore_patterns(
-            ".git", "__pycache__", ".pytest_cache", "*.pyc", "*.minisig"
+            ".git",
+            "__pycache__",
+            ".pytest_cache",
+            "*.pyc",
+            "*.minisig",
+            "release.json",
+            "registry.sha256",
         ),
     )
     return directory
