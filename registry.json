@@ -1,0 +1,44 @@
+{
+  "$schema": "./schemas/registry.schema.json",
+  "adapters": [
+    {
+      "appliesTo": [
+        "file"
+      ],
+      "author": "Red Pen Community",
+      "description": "Counts non-empty lines in a submitted text file and compares the count with the key answer. A minimal starter adapter for the Red Pen community registry.",
+      "extensions": [
+        "txt",
+        "md",
+        "text"
+      ],
+      "files": [
+        {
+          "path": "adapter.lua",
+          "sha256": "a04be6b2cbe51a03872499829791543a7f1302dbd95dbf0feddf12361d2a41f3"
+        },
+        {
+          "path": "manifest.json",
+          "sha256": "bdd320b1eb3f7cd95633fd2ab18f28c9c36d8fbc26d1f6cdfc25a52c3d6bf630"
+        }
+      ],
+      "folder": "example",
+      "homepage": "https://github.com/eslam-allam/red-pen-adapters-community",
+      "id": "example",
+      "name": "Example line counter",
+      "permissions": [],
+      "readmeUrl": "https://raw.githubusercontent.com/eslam-allam/red-pen-adapters-community/main/example/README.md",
+      "version": "1.0.0"
+    }
+  ],
+  "description": "Community-contributed Red Pen adapters, reviewed and published through the signed community registry.",
+  "expiresAt": "2027-05-20T00:04:40Z",
+  "homepage": "https://github.com/eslam-allam/red-pen-adapters-community",
+  "issuedAt": "2026-11-21T00:04:40Z",
+  "kind": "red-pen-adapters",
+  "name": "Red Pen community adapter registry",
+  "publisher": "Red Pen Community",
+  "registryId": "red-pen-community",
+  "schema": 6,
+  "sequence": 1
+}
