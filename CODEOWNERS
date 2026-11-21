@@ -1,0 +1,17 @@
+# Default owner for the community registry.
+* @eslam-allam
+
+# Security-sensitive files require an explicit review.
+/schemas/ @eslam-allam
+/scripts/ @eslam-allam
+/keys/ @eslam-allam
+/.github/ @eslam-allam
+/registry.config.json @eslam-allam
+/registry.json @eslam-allam
+/SECURITY.md @eslam-allam
+/CODEOWNERS @eslam-allam
+
+# Moderation and community policy changes need a maintainer review.
+/docs/moderation.md @eslam-allam
+/docs/inclusion.md @eslam-allam
+/CONTRIBUTING.md @eslam-allam
