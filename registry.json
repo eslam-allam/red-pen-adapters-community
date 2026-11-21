@@ -2,6 +2,7 @@
   "$schema": "./schemas/registry.schema.json",
   "adapters": [
     {
+      "apiVersion": 2,
       "appliesTo": [
         "file"
       ],
@@ -15,30 +16,44 @@
       "files": [
         {
           "path": "adapter.lua",
-          "sha256": "a04be6b2cbe51a03872499829791543a7f1302dbd95dbf0feddf12361d2a41f3"
+          "sha256": "3cca255dca97218a8e18a4f55468e5fce3ec4c5b0d6643fbd60b0ed137016951"
         },
         {
           "path": "manifest.json",
-          "sha256": "bdd320b1eb3f7cd95633fd2ab18f28c9c36d8fbc26d1f6cdfc25a52c3d6bf630"
+          "sha256": "16020bb314121266fbea2f1ecfb4d1677e3dc0a0b24883007bf77d0a8665bbac"
         }
       ],
       "folder": "example",
       "homepage": "https://github.com/eslam-allam/red-pen-adapters-community",
       "id": "example",
+      "keyInput": [
+        {
+          "help": "The number of non-empty lines the submitted file should contain.",
+          "key": "expectedLines",
+          "label": "Expected non-empty lines",
+          "required": true,
+          "type": "number"
+        }
+      ],
       "name": "Example line counter",
+      "output": {
+        "kinds": [
+          "diff"
+        ],
+        "label": "Line count"
+      },
       "permissions": [],
+      "questionInput": [],
       "readmeUrl": "https://raw.githubusercontent.com/eslam-allam/red-pen-adapters-community/main/example/README.md",
+      "settings": [],
       "version": "1.0.0"
     }
   ],
-  "description": "Community-contributed Red Pen adapters, reviewed and published through the signed community registry.",
   "expiresAt": "2027-05-20T09:04:20Z",
-  "homepage": "https://github.com/eslam-allam/red-pen-adapters-community",
   "issuedAt": "2026-11-21T09:04:20Z",
   "kind": "red-pen-adapters",
-  "name": "Red Pen community adapter registry",
   "publisher": "Red Pen Community",
   "registryId": "red-pen-community",
-  "schema": 6,
+  "schema": 7,
   "sequence": 2
 }

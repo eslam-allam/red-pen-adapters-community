@@ -1,8 +1,9 @@
 # Red Pen community adapter registry
 
-The community-run registry for Red Pen adapters. It publishes a schema 6 signed
-index (`registry.json`), authenticates every adapter file by SHA-256, and is
-signed by a separate community key in a protected GitHub environment.
+The community-run registry for Red Pen adapters. It publishes a schema 7 signed
+index (`registry.json`) for manifest schema 5 / API 2, authenticates every
+adapter file by SHA-256, and is signed by a separate community key in a
+protected GitHub environment.
 
 This registry is not the official registry. It is the `community` trust tier:
 the app embeds the community public key, but community adapters are off by
@@ -11,10 +12,11 @@ default and require explicit user consent.
 ## What is in the box
 
 ```
-registry.json                 Signed index (schema 6)
+registry.json                 Signed index (schema 7, API 2)
 registry.config.json          Registry identity, tier, signing settings
 example/                      A minimal working starter adapter
-schemas/                      registry, manifest, and registry.config schemas
+schemas/                      Registry/manifest schemas, mirror list, source marker
+lua/red-pen-api.lua           Copied runtime API reference
 scripts/registry.py           Canonical JSON, key ids, CI config helpers
 scripts/update.py             Regenerate registry.json from adapter folders
 scripts/validate.py           Schema, hash, runtime, and signature validation
@@ -47,19 +49,25 @@ python scripts/sign.py --test-key
 
 ## Registry format
 
-`registry.json` is schema 6. Its exact bytes are signed with a detached
-minisign signature (`registry.json.minisig`). The index authenticates every
-adapter file by SHA-256, so the app never trusts a manifest or script from an
-unsigned source.
+`registry.json` is schema 7 and targets manifest schema 5 / API 2. Its exact
+bytes are signed with a detached minisign signature
+(`registry.json.minisig`). The index authenticates every adapter file by
+SHA-256, so the app never trusts a manifest or script from an unsigned source.
 
 The signed document carries:
 
-- `schema: 6`, `kind: "red-pen-adapters"`;
+- `schema: 7`, `kind: "red-pen-adapters"`;
 - the reserved slug `registryId: "red-pen-community"`;
 - a string `publisher` (`Red Pen Community`), `sequence`, `issuedAt`, and
   `expiresAt`;
-- one entry per adapter, with `folder`, `files[{path, sha256}]`, and
-  `readmeUrl`.
+- one entry per adapter with `apiVersion: 2`, `folder`,
+  `files[{path, sha256}]`, and `readmeUrl`;
+- mirrored `settings`, `keyInput`, `questionInput`, `output`, `runtimes`,
+  `bootstrap`, grants, and picker fields from the manifest.
+
+There is no root `name`; v2 uses `publisher`. Bare-string file entries, legacy
+permissions, and manifest `language`/`miseTool` hints are rejected. A managed
+runtime's primary tool is `manifest.runtimes[0].tool`.
 
 See [docs/format.md](docs/format.md) for every field and the deterministic JSON
 rules.
